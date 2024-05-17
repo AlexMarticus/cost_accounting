@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>470</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>470</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>640</width>
+    <height>470</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Учет собственных денежных средств</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>640</width>
+      <height>470</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="transaction_page">
+     <widget class="QPushButton" name="back_to_MainMenu_bt">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>80</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Назад</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="filter_label">
+      <property name="geometry">
+       <rect>
+        <x>135</x>
+        <y>10</y>
+        <width>60</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;ФИЛЬТР:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="filter_categories_comboBox">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>15</y>
+        <width>130</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="filter_date_comboBox">
+      <property name="geometry">
+       <rect>
+        <x>335</x>
+        <y>15</y>
+        <width>150</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="filter_type_comboBox">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>15</y>
+        <width>130</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="delete_trans_bt">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>60</y>
+        <width>145</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Удалить транзакцию</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="sort_label">
+      <property name="geometry">
+       <rect>
+        <x>14</x>
+        <y>62</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Сортировать по цене:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="sort_comboBox">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>60</y>
+        <width>111</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>от min к max</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>от min к max</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>620</width>
+        <height>360</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="main_page">
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>325</x>
+        <y>10</y>
+        <width>310</width>
+        <height>250</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="balance_label">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>310</width>
+         <height>55</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;БАЛАНС ЗА МЕСЯЦ&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="residue_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>55</y>
+         <width>89</width>
+         <height>55</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Баланс:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="income_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>89</width>
+         <height>55</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Доходы:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="outcome_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>165</y>
+         <width>89</width>
+         <height>55</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Расходы:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="balance_value_label">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>55</y>
+         <width>141</width>
+         <height>55</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;1000000000.00&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="income_value_label">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>110</y>
+         <width>141</width>
+         <height>55</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;1000000000.00&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="outcome_value_label">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>165</y>
+         <width>141</width>
+         <height>55</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;1000000000.00&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>310</width>
+        <height>450</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="price_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>89</width>
+         <height>55</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Цена:</string>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="price_doubleSpinBox">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>127</y>
+         <width>185</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <double>1000000000.000000000000000</double>
+       </property>
+      </widget>
+      <widget class="QLabel" name="categoty_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>220</y>
+         <width>89</width>
+         <height>55</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Категория:</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="category_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>237</y>
+         <width>185</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="product_name_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>55</y>
+         <width>89</width>
+         <height>55</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Название:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="product_name_lineEdit">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>72</y>
+         <width>185</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="product_label">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>310</width>
+         <height>55</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Новая транзакция&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="comment_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>330</y>
+         <width>89</width>
+         <height>80</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Комментарий:</string>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="comment_textEdit">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>343</y>
+         <width>181</width>
+         <height>61</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="commit_trans_bt">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>415</y>
+         <width>285</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Подтвердить</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="type_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>165</y>
+         <width>89</width>
+         <height>55</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Тип:</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="type_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>182</y>
+         <width>185</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="date_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>275</y>
+         <width>89</width>
+         <height>55</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Дата:</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="date_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>292</y>
+         <width>185</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="transactions_bt">
+      <property name="geometry">
+       <rect>
+        <x>325</x>
+        <y>265</y>
+        <width>152</width>
+        <height>195</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ТРАНЗАКЦИИ</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="delete_category_bt">
+      <property name="geometry">
+       <rect>
+        <x>483</x>
+        <y>265</y>
+        <width>152</width>
+        <height>95</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>УДАЛИТЬ КАТЕГОРИЮ</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="new_category_bt">
+      <property name="geometry">
+       <rect>
+        <x>483</x>
+        <y>365</y>
+        <width>152</width>
+        <height>95</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>НОВАЯ КАТЕГОРИЯ</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
